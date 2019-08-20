@@ -5,5 +5,12 @@ jobs:
    - image: circleci/ruby:2.4.1
    steps:
    - checkout
-   - run: echo notacommand
+   - run: echo "a first hello"
+   - run: sleep 5
+ test:
+   docker:
+   - image: circleci/ruby:2.4.1
+   steps:
+   - checkout
+   - run: echo "a more familiar hi"
    - run: sleep 5
